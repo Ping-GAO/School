@@ -11,11 +11,18 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
-// import Divider from '@material-ui/core/Divider';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import Drawer from '@material-ui/core/Drawer';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
+import SchoolIcon from '@material-ui/icons/School';
+import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import ApartmentIcon from '@material-ui/icons/Apartment';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
+import EcoIcon from '@material-ui/icons/Eco';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -75,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
     },
     girdContainer: {
         margin: 0,
+    },
+    listText: {
+        textAlign: 'center',
     },
 }));
 
@@ -136,7 +146,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <SchoolIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="学校管理" />
                                     </ListItem>
@@ -144,7 +154,7 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItem button>
-                                        <ListItemText primary="default" />
+                                        <ListItemText primary="Default" className={classes.listText} />
                                     </ListItem>
                                 </List>
                             </Grid>
@@ -152,7 +162,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <WorkOutlineIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="党建天地" />
                                     </ListItem>
@@ -160,22 +170,22 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItem button>
-                                        <ListItemText primary="廉政建设" />
+                                        <ListItemText primary="廉政建设" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="群团活动" />
+                                        <ListItemText primary="群团活动" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="党建联建" />
+                                        <ListItemText primary="党建联建" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="党员风采" />
+                                        <ListItemText primary="党员风采" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="党务公开" />
+                                        <ListItemText primary="党务公开" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="工作动态" />
+                                        <ListItemText primary="工作动态" className={classes.listText} />
                                     </ListItem>
                                 </List>
                             </Grid>
@@ -183,7 +193,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <AccessibilityNewIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="德育之窗" />
                                     </ListItem>
@@ -191,19 +201,19 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItem button>
-                                        <ListItemText primary="德育活动" />
+                                        <ListItemText primary="德育活动" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="团队建设" />
+                                        <ListItemText primary="团队建设" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="家校互动" />
+                                        <ListItemText primary="家校互动" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="心理教育" />
+                                        <ListItemText primary="心理教育" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="德育常规" />
+                                        <ListItemText primary="德育常规" className={classes.listText} />
                                     </ListItem>
                                 </List>
                             </Grid>
@@ -214,7 +224,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <AssessmentIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="教学风采" />
                                     </ListItem>
@@ -223,22 +233,22 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <List component="nav">
                                         <ListItem button>
-                                            <ListItemText primary="学生荣誉" />
+                                            <ListItemText primary="学生荣誉" className={classes.listText} />
                                         </ListItem>
                                         <ListItem button>
-                                            <ListItemText primary="学籍管理" />
+                                            <ListItemText primary="学籍管理" className={classes.listText} />
                                         </ListItem>
                                         <ListItem button>
-                                            <ListItemText primary="课堂展示" />
+                                            <ListItemText primary="课堂展示" className={classes.listText} />
                                         </ListItem>
                                         <ListItem button>
-                                            <ListItemText primary="体育卫生" />
+                                            <ListItemText primary="体育卫生" className={classes.listText} />
                                         </ListItem>
                                         <ListItem button>
-                                            <ListItemText primary="教学常规" />
+                                            <ListItemText primary="教学常规" className={classes.listText} />
                                         </ListItem>
                                         <ListItem button>
-                                            <ListItemText primary="课表查询" />
+                                            <ListItemText primary="课表查询" className={classes.listText} />
                                         </ListItem>
                                     </List>
                                 </List>
@@ -247,7 +257,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <EmojiEventsIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="科研师训" />
                                     </ListItem>
@@ -255,19 +265,19 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItem button>
-                                        <ListItemText primary="论文发表" />
+                                        <ListItemText primary="论文发表" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="课题研究" />
+                                        <ListItemText primary="课题研究" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="科研资讯" />
+                                        <ListItemText primary="科研资讯" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="数学基地" />
+                                        <ListItemText primary="数学基地" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="科研获奖" />
+                                        <ListItemText primary="科研获奖" className={classes.listText} />
                                     </ListItem>
 
                                 </List>
@@ -276,19 +286,19 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <ApartmentIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="总务后勤" />
+                                        <ListItemText primary="总务后勤" className={classes.listText} />
                                     </ListItem>
                                 </List>
                                 <Divider />
                                 <List component="nav">
 
                                     <ListItem button>
-                                        <ListItemText primary="教育后勤" />
+                                        <ListItemText primary="教育后勤" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="生活后勤" />
+                                        <ListItemText primary="生活后勤" className={classes.listText} />
                                     </ListItem>
 
                                 </List>
@@ -299,7 +309,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <EcoIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="学生园地" />
                                     </ListItem>
@@ -307,7 +317,7 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItem button>
-                                        <ListItemText primary="default" />
+                                        <ListItemText primary="Default" className={classes.listText} />
                                     </ListItem>
                                 </List>
                             </Grid>
@@ -315,7 +325,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <LocalLibraryIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="责任督学" />
                                     </ListItem>
@@ -323,13 +333,13 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItem button>
-                                        <ListItemText primary="公示公报" />
+                                        <ListItemText primary="公示公报" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="督导动态" />
+                                        <ListItemText primary="督导动态" className={classes.listText} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="政策法规" />
+                                        <ListItemText primary="政策法规" className={classes.listText} />
                                     </ListItem>
                                 </List>
                             </Grid>
@@ -337,7 +347,7 @@ export default function SearchAppBar() {
                                 <List component="nav">
                                     <ListItem button>
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <VisibilityIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="依法治校" />
                                     </ListItem>
@@ -345,7 +355,7 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItem button>
-                                        <ListItemText primary="default" />
+                                        <ListItemText primary="Default" className={classes.listText} />
                                     </ListItem>
                                 </List>
                             </Grid>
