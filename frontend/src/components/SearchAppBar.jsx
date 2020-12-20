@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -7,6 +7,15 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import clsx from 'clsx';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import Drawer from '@material-ui/core/Drawer';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -61,11 +70,52 @@ const useStyles = makeStyles((theme) => ({
             },
         },
     },
+    list: {
+        width: 250,
+    },
+    fullList: {
+        width: 'auto',
+    },
 }));
 
 export default function SearchAppBar() {
     const classes = useStyles();
+    const [open, setOpen] = useState(false);
 
+    const handleDrawerOpen = () => {
+        setOpen(true);
+    };
+
+    const handleDrawerClose = () => {
+        setOpen(false);
+    };
+
+    const list = () => (
+        <div
+            className={clsx(classes.list, classes.fullList)}
+            role="presentation"
+            onClick={handleDrawerClose}
+            onKeyDown={handleDrawerClose}
+        >
+            <List>
+                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <List>
+                {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+        </div>
+    );
     return (
         <div className={classes.root}>
             <AppBar position="static">
@@ -75,6 +125,7 @@ export default function SearchAppBar() {
                         className={classes.menuButton}
                         color="inherit"
                         aria-label="open drawer"
+                        onClick={handleDrawerOpen}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -96,6 +147,9 @@ export default function SearchAppBar() {
                     </div>
                 </Toolbar>
             </AppBar>
+            <Drawer anchor="top" open={open} onClose={handleDrawerClose}>
+                {list()}
+            </Drawer>
         </div>
     );
 }
