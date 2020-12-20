@@ -7,15 +7,16 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import clsx from 'clsx';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+// import ListItem from '@material-ui/core/ListItem';
+// import ListItemIcon from '@material-ui/core/ListItemIcon';
+// import ListItemText from '@material-ui/core/ListItemText';
+// import List from '@material-ui/core/List';
+// import Divider from '@material-ui/core/Divider';
+// import InboxIcon from '@material-ui/icons/MoveToInbox';
+// import MailIcon from '@material-ui/icons/Mail';
 import Drawer from '@material-ui/core/Drawer';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -70,11 +71,17 @@ const useStyles = makeStyles((theme) => ({
             },
         },
     },
-    list: {
-        width: 250,
-    },
+
     fullList: {
         width: 'auto',
+    },
+    paper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
+    girdContainer: {
+        margin: 0,
     },
 }));
 
@@ -90,32 +97,6 @@ export default function SearchAppBar() {
         setOpen(false);
     };
 
-    const list = () => (
-        <div
-            className={clsx(classes.list, classes.fullList)}
-            role="presentation"
-            onClick={handleDrawerClose}
-            onKeyDown={handleDrawerClose}
-        >
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-        </div>
-    );
     return (
         <div className={classes.root}>
             <AppBar position="static">
@@ -130,7 +111,7 @@ export default function SearchAppBar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Material-UI
+                        进华中学
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
@@ -148,7 +129,42 @@ export default function SearchAppBar() {
                 </Toolbar>
             </AppBar>
             <Drawer anchor="top" open={open} onClose={handleDrawerClose}>
-                {list()}
+                <div
+                    className={classes.fullList}
+                    role="presentation"
+                    onClick={handleDrawerClose}
+                    onKeyDown={handleDrawerClose}
+                >
+
+                    <Grid container item spacing={3} xs={12} className={classes.girdContainer}>
+                        <Grid item xs={12}>
+                            <Paper className={classes.paper}>xs=12</Paper>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Paper className={classes.paper}>xs=12</Paper>
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <Paper className={classes.paper}>xs=6</Paper>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Paper className={classes.paper}>xs=6</Paper>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <Paper className={classes.paper}>xs=3</Paper>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <Paper className={classes.paper}>xs=3</Paper>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <Paper className={classes.paper}>xs=3</Paper>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <Paper className={classes.paper}>xs=3</Paper>
+                        </Grid>
+                    </Grid>
+
+                </div>
             </Drawer>
         </div>
     );
