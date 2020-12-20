@@ -235,27 +235,26 @@ export default function SearchAppBar() {
                                     </ListItem>
                                 </List>
                                 <Divider />
+
                                 <List component="nav">
-                                    <List component="nav">
-                                        <ListItemTextCenter>
-                                            <ListItemText primary="学生荣誉" />
-                                        </ListItemTextCenter>
-                                        <ListItemTextCenter>
-                                            <ListItemText primary="学籍管理" />
-                                        </ListItemTextCenter>
-                                        <ListItemTextCenter>
-                                            <ListItemText primary="课堂展示" />
-                                        </ListItemTextCenter>
-                                        <ListItemTextCenter>
-                                            <ListItemText primary="体育卫生" />
-                                        </ListItemTextCenter>
-                                        <ListItemTextCenter>
-                                            <ListItemText primary="教学常规" />
-                                        </ListItemTextCenter>
-                                        <ListItemTextCenter>
-                                            <ListItemText primary="课表查询" />
-                                        </ListItemTextCenter>
-                                    </List>
+                                    <ListItemTextCenter>
+                                        <ListItemText primary="学生荣誉" />
+                                    </ListItemTextCenter>
+                                    <ListItemTextCenter>
+                                        <ListItemText primary="学籍管理" />
+                                    </ListItemTextCenter>
+                                    <ListItemTextCenter>
+                                        <ListItemText primary="课堂展示" />
+                                    </ListItemTextCenter>
+                                    <ListItemTextCenter>
+                                        <ListItemText primary="体育卫生" />
+                                    </ListItemTextCenter>
+                                    <ListItemTextCenter>
+                                        <ListItemText primary="教学常规" />
+                                    </ListItemTextCenter>
+                                    <ListItemTextCenter>
+                                        <ListItemText primary="课表查询" />
+                                    </ListItemTextCenter>
                                 </List>
                             </Grid>
                             <Grid item xs={4}>
