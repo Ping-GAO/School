@@ -7,16 +7,15 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from '@material-ui/core/ListItemIcon';
-// import ListItemText from '@material-ui/core/ListItemText';
-// import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import List from '@material-ui/core/List';
 // import Divider from '@material-ui/core/Divider';
-// import InboxIcon from '@material-ui/icons/MoveToInbox';
-// import MailIcon from '@material-ui/icons/Mail';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
 import Drawer from '@material-ui/core/Drawer';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -71,14 +70,8 @@ const useStyles = makeStyles((theme) => ({
             },
         },
     },
-
     fullList: {
         width: 'auto',
-    },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
     },
     girdContainer: {
         margin: 0,
@@ -96,7 +89,6 @@ export default function SearchAppBar() {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-
     return (
         <div className={classes.root}>
             <AppBar position="static">
@@ -136,32 +128,229 @@ export default function SearchAppBar() {
                     onKeyDown={handleDrawerClose}
                 >
 
-                    <Grid container item spacing={3} xs={12} className={classes.girdContainer}>
-                        <Grid item xs={12}>
-                            <Paper className={classes.paper}>xs=12</Paper>
+                    <Grid container item spacing={1} xs={12} className={classes.girdContainer}>
+
+                        <Grid container item xs={4}>
+
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="学校管理" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemText primary="default" />
+                                    </ListItem>
+                                </List>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="党建天地" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemText primary="廉政建设" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="群团活动" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="党建联建" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="党员风采" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="党务公开" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="工作动态" />
+                                    </ListItem>
+                                </List>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="德育之窗" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemText primary="德育活动" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="团队建设" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="家校互动" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="心理教育" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="德育常规" />
+                                    </ListItem>
+                                </List>
+                            </Grid>
+
                         </Grid>
-                        <Grid item xs={12}>
-                            <Paper className={classes.paper}>xs=12</Paper>
+                        <Grid container item xs={4}>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="教学风采" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <List component="nav">
+                                        <ListItem button>
+                                            <ListItemText primary="学生荣誉" />
+                                        </ListItem>
+                                        <ListItem button>
+                                            <ListItemText primary="学籍管理" />
+                                        </ListItem>
+                                        <ListItem button>
+                                            <ListItemText primary="课堂展示" />
+                                        </ListItem>
+                                        <ListItem button>
+                                            <ListItemText primary="体育卫生" />
+                                        </ListItem>
+                                        <ListItem button>
+                                            <ListItemText primary="教学常规" />
+                                        </ListItem>
+                                        <ListItem button>
+                                            <ListItemText primary="课表查询" />
+                                        </ListItem>
+                                    </List>
+                                </List>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="科研师训" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemText primary="论文发表" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="课题研究" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="科研资讯" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="数学基地" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="科研获奖" />
+                                    </ListItem>
+
+                                </List>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="总务后勤" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+
+                                    <ListItem button>
+                                        <ListItemText primary="教育后勤" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="生活后勤" />
+                                    </ListItem>
+
+                                </List>
+                            </Grid>
+                        </Grid>
+                        <Grid container item xs={4}>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="学生园地" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemText primary="default" />
+                                    </ListItem>
+                                </List>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="责任督学" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemText primary="公示公报" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="督导动态" />
+                                    </ListItem>
+                                    <ListItem button>
+                                        <ListItemText primary="政策法规" />
+                                    </ListItem>
+                                </List>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <InboxIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="依法治校" />
+                                    </ListItem>
+                                </List>
+                                <Divider />
+                                <List component="nav">
+                                    <ListItem button>
+                                        <ListItemText primary="default" />
+                                    </ListItem>
+                                </List>
+                            </Grid>
                         </Grid>
 
-                        <Grid item xs={6}>
-                            <Paper className={classes.paper}>xs=6</Paper>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Paper className={classes.paper}>xs=6</Paper>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Paper className={classes.paper}>xs=3</Paper>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Paper className={classes.paper}>xs=3</Paper>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Paper className={classes.paper}>xs=3</Paper>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Paper className={classes.paper}>xs=3</Paper>
-                        </Grid>
                     </Grid>
 
                 </div>
