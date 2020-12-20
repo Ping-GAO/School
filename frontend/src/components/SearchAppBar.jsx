@@ -23,6 +23,7 @@ import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 import EcoIcon from '@material-ui/icons/Eco';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -90,6 +91,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchAppBar() {
     const classes = useStyles();
+    const history = useHistory();
     const [open, setOpen] = useState(false);
 
     const handleDrawerOpen = () => {
@@ -142,11 +144,8 @@ export default function SearchAppBar() {
                     onClick={handleDrawerClose}
                     onKeyDown={handleDrawerClose}
                 >
-
                     <Grid container item spacing={1} xs={12} className={classes.girdContainer}>
-
                         <Grid container item xs={4}>
-
                             <Grid item xs={4}>
                                 <List component="nav">
                                     <ListItem>
@@ -174,13 +173,22 @@ export default function SearchAppBar() {
                                 </List>
                                 <Divider />
                                 <List component="nav">
-                                    <ListItemTextCenter>
+                                    <ListItemTextCenter onClick={() => {
+                                        history.push('/ccp-achievement/LianZhengJianShe');
+                                    }}
+                                    >
                                         <ListItemText primary="廉政建设" />
                                     </ListItemTextCenter>
-                                    <ListItemTextCenter>
+                                    <ListItemTextCenter onClick={() => {
+                                        history.push('/ccp-achievement/QunTuanHuoDong');
+                                    }}
+                                    >
                                         <ListItemText primary="群团活动" />
                                     </ListItemTextCenter>
-                                    <ListItemTextCenter>
+                                    <ListItemTextCenter onClick={() => {
+                                        history.push('/ccp-achievement/DangJianLianJian');
+                                    }}
+                                    >
                                         <ListItemText primary="党建联建" />
                                     </ListItemTextCenter>
                                     <ListItemTextCenter>
