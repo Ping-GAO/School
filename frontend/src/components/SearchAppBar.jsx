@@ -144,7 +144,7 @@ export default function SearchAppBar() {
 
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <SchoolIcon />
                                         </ListItemIcon>
@@ -160,7 +160,7 @@ export default function SearchAppBar() {
                             </Grid>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <WorkOutlineIcon />
                                         </ListItemIcon>
@@ -191,7 +191,7 @@ export default function SearchAppBar() {
                             </Grid>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <AccessibilityNewIcon />
                                         </ListItemIcon>
@@ -222,7 +222,7 @@ export default function SearchAppBar() {
                         <Grid container item xs={4}>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <AssessmentIcon />
                                         </ListItemIcon>
@@ -255,7 +255,7 @@ export default function SearchAppBar() {
                             </Grid>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <EmojiEventsIcon />
                                         </ListItemIcon>
@@ -284,7 +284,7 @@ export default function SearchAppBar() {
                             </Grid>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <ApartmentIcon />
                                         </ListItemIcon>
@@ -307,7 +307,7 @@ export default function SearchAppBar() {
                         <Grid container item xs={4}>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <EcoIcon />
                                         </ListItemIcon>
@@ -323,7 +323,7 @@ export default function SearchAppBar() {
                             </Grid>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <LocalLibraryIcon />
                                         </ListItemIcon>
@@ -345,7 +345,7 @@ export default function SearchAppBar() {
                             </Grid>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem>
                                         <ListItemIcon>
                                             <VisibilityIcon />
                                         </ListItemIcon>
