@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             display: 'block',
         },
+        cursor: 'pointer',
     },
     search: {
         position: 'relative',
@@ -119,7 +120,14 @@ export default function SearchAppBar() {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography className={classes.title} variant="h6" noWrap>
+                    <Typography
+                        className={classes.title}
+                        variant="h6"
+                        noWrap
+                        onClick={() => {
+                            history.push('/');
+                        }}
+                    >
                         进华中学
                     </Typography>
                     <div className={classes.search}>
