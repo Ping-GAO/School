@@ -5,9 +5,9 @@ import {
 import Dashboard from './pages/Dashboard';
 import PlaceHolder from './pages/PlaceHolder';
 import SearchAppBar from './components/SearchAppBar';
-import LianZhengJianShe from './pages/ccp-achievement/LianZhengJianShe';
-import QunTuanHuoDong from './pages/ccp-achievement/QunTuanHuoDong';
-import DangJianLianJian from './pages/ccp-achievement/DangJianLianJian';
+import LianZhengJianShe from './pages/DangJianTianDi/LianZhengJianShe';
+import QunTuanHuoDong from './pages/DangJianTianDi/QunTuanHuoDong';
+import DangJianLianJian from './pages/DangJianTianDi/DangJianLianJian';
 
 function App() {
     return (
@@ -21,15 +21,15 @@ function App() {
                     <Route exact path="/dashboard">
                         <Dashboard />
                     </Route>
-                    <Route exact path="/ccp-achievement/LianZhengJianShe">
+                    <Route exact path="/DangJianTianDi/LianZhengJianShe">
                         <LianZhengJianShe />
                     </Route>
 
-                    <Route exact path="/ccp-achievement/QunTuanHuoDong">
+                    <Route exact path="/DangJianTianDi/QunTuanHuoDong">
                         <QunTuanHuoDong />
                     </Route>
 
-                    <Route exact path="/ccp-achievement/DangJianLianJian">
+                    <Route exact path="/DangJianTianDi/DangJianLianJian">
                         <DangJianLianJian />
                     </Route>
 

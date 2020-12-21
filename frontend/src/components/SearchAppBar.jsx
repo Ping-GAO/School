@@ -174,19 +174,19 @@ export default function SearchAppBar() {
                                 <Divider />
                                 <List component="nav">
                                     <ListItemTextCenter onClick={() => {
-                                        history.push('/ccp-achievement/LianZhengJianShe');
+                                        history.push('/DangJianTianDi/LianZhengJianShe');
                                     }}
                                     >
                                         <ListItemText primary="廉政建设" />
                                     </ListItemTextCenter>
                                     <ListItemTextCenter onClick={() => {
-                                        history.push('/ccp-achievement/QunTuanHuoDong');
+                                        history.push('/DangJianTianDi/QunTuanHuoDong');
                                     }}
                                     >
                                         <ListItemText primary="群团活动" />
                                     </ListItemTextCenter>
                                     <ListItemTextCenter onClick={() => {
-                                        history.push('/ccp-achievement/DangJianLianJian');
+                                        history.push('/DangJianTianDi/DangJianLianJian');
                                     }}
                                     >
                                         <ListItemText primary="党建联建" />
