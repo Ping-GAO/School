@@ -8,6 +8,7 @@ import SearchAppBar from './components/SearchAppBar';
 import LianZhengJianShe from './pages/DangJianTianDi/LianZhengJianShe';
 import QunTuanHuoDong from './pages/DangJianTianDi/QunTuanHuoDong';
 import DangJianLianJian from './pages/DangJianTianDi/DangJianLianJian';
+import DangJianTianDi from './pages/DangJianTianDi';
 
 function App() {
     return (
@@ -20,6 +21,9 @@ function App() {
                     </Route>
                     <Route exact path="/dashboard">
                         <Dashboard />
+                    </Route>
+                    <Route exact path="/DangJianTianDi">
+                        <DangJianTianDi />
                     </Route>
                     <Route exact path="/DangJianTianDi/LianZhengJianShe">
                         <LianZhengJianShe />
