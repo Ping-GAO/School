@@ -103,6 +103,7 @@ export default function SearchAppBar() {
         setOpen(false);
     };
 
+    // a warpper that make the text centered in ListItem
     function ListItemTextCenter(props) {
         return <ListItem button className={classes.listText} {...props} />;
     }
