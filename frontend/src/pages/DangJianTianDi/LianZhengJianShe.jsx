@@ -2,7 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
+import LinkM from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import a from '../../asserts/images/admission_title.jpg';
 
@@ -42,6 +43,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 const LianZhengJianShe = () => {
     const classes = useStyles();
+
+    // intergrate material ui link and react router link
+    // this give us the default material ui appearance and react router onClick beheavior
+    // if u just use material ui link when user click it, the page will refresh and could be very slow
+    // deny the whole purpose of SPA so i avoid it
     return (
         <>
             <div className={classes.channel}>
@@ -51,14 +57,13 @@ const LianZhengJianShe = () => {
                         廉政建设
                     </Typography>
                     <Breadcrumbs aria-label="breadcrumb" className={classes.breadcrumbs}>
-
-                        <Link color="inherit" href="/" className={classes.link}>
+                        <LinkM color="inherit" component={Link} to="/" className={classes.link}>
                             <HomeIcon className={classes.icon} />
                             主页
-                        </Link>
-                        <Link color="inherit" href="/DangJianTianDi">
+                        </LinkM>
+                        <LinkM color="inherit" component={Link} to="/DangJianTianDi">
                             党建天地
-                        </Link>
+                        </LinkM>
                         <Typography color="textPrimary"> 廉政建设</Typography>
                     </Breadcrumbs>
                 </div>

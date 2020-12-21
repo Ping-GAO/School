@@ -173,7 +173,12 @@ export default function SearchAppBar() {
                             </Grid>
                             <Grid item xs={4}>
                                 <List component="nav">
-                                    <ListItem button>
+                                    <ListItem
+                                        button
+                                        onClick={() => {
+                                            history.push('/DangJianTianDi');
+                                        }}
+                                    >
                                         <ListItemIcon>
                                             <WorkOutlineIcon />
                                         </ListItemIcon>
