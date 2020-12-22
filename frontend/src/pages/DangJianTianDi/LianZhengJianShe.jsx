@@ -5,6 +5,7 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import LinkM from '@material-ui/core/Link';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
+import Sticky from 'react-sticky-el';
 import a from '../../asserts/images/admission_title.jpg';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,9 +42,26 @@ const useStyles = makeStyles((theme) => ({
         height: 20,
     },
     mainWrap: {
-        margin: '30px 200px 0px 70px',
-        height: 800,
+        margin: '30px 70px 0px 70px',
+        height: 2000,
         backgroundColor: 'white',
+        display: 'flex',
+    },
+    navWrap: {
+        // backgroundColor: 'lightblue',
+        width: 130,
+
+    },
+    contentWrap: {
+        flex: 1,
+        backgroundColor: 'lightgreen',
+    },
+    stickyNav: {
+        height: 300,
+        backgroundColor: 'red',
+    },
+    stickyActive: {
+        fontSize: '2em',
     },
 }));
 const LianZhengJianShe = () => {
@@ -54,7 +72,7 @@ const LianZhengJianShe = () => {
     // if u just use material ui link when user click it, the page will refresh and could be very slow
     // deny the whole purpose of SPA so i avoid it
     return (
-        <>
+        <div>
             <div className={classes.channel}>
                 <div className={classes.channelIntro}>
 
@@ -75,9 +93,20 @@ const LianZhengJianShe = () => {
 
             </div>
             <div className={classes.mainWrap}>
-                aaa
+                <div className={classes.contentWrap}>mainContent</div>
+
+                <div className={classes.navWrap}>
+                    <Sticky
+                        stickyClassName={classes.stickyActive}
+                    >
+                        <div className={classes.stickyNav}>
+                            sticky navbar
+                        </div>
+                    </Sticky>
+                </div>
+
             </div>
-        </>
+        </div>
     );
 };
 
