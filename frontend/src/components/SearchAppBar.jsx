@@ -24,6 +24,8 @@ import EcoIcon from '@material-ui/icons/Eco';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -90,7 +92,23 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SearchAppBar() {
+function ElevationScroll(props) {
+    const { children } = props;
+    const trigger = useScrollTrigger({
+        disableHysteresis: true,
+        threshold: 0,
+    });
+
+    return React.cloneElement(children, {
+        elevation: trigger ? 4 : 0,
+    });
+}
+
+ElevationScroll.propTypes = {
+    children: PropTypes.element.isRequired,
+};
+
+export default function SearchAppBar(props_) {
     const classes = useStyles();
     const history = useHistory();
     const [open, setOpen] = useState(false);
@@ -110,42 +128,46 @@ export default function SearchAppBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={handleDrawerOpen}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography
-                        className={classes.title}
-                        variant="h6"
-                        noWrap
-                        onClick={() => {
-                            history.push('/');
-                        }}
-                    >
-                        进华中学
-                    </Typography>
-                    <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <SearchIcon />
-                        </div>
-                        <InputBase
-                            placeholder="Search…"
-                            classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput,
+
+            <ElevationScroll {...props_}>
+                <AppBar>
+                    <Toolbar>
+                        <IconButton
+                            edge="start"
+                            className={classes.menuButton}
+                            color="inherit"
+                            aria-label="open drawer"
+                            onClick={handleDrawerOpen}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography
+                            className={classes.title}
+                            variant="h6"
+                            noWrap
+                            onClick={() => {
+                                history.push('/');
                             }}
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </div>
-                </Toolbar>
-            </AppBar>
+                        >
+                            进华中学
+                        </Typography>
+                        <div className={classes.search}>
+                            <div className={classes.searchIcon}>
+                                <SearchIcon />
+                            </div>
+                            <InputBase
+                                placeholder="Search…"
+                                classes={{
+                                    root: classes.inputRoot,
+                                    input: classes.inputInput,
+                                }}
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                        </div>
+                    </Toolbar>
+                </AppBar>
+            </ElevationScroll>
+            <Toolbar />
             <Drawer anchor="top" open={open} onClose={handleDrawerClose}>
                 <div
                     className={classes.fullList}

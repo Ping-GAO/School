@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DangJianTianDi = () => (
-    <div>DangJianTianDi</div>
+    <div style={{ height: '800px' }}>DangJianTianDi</div>
 );
 
 export default DangJianTianDi;
