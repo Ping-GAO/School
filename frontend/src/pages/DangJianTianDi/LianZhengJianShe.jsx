@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     navWrap: {
         // backgroundColor: 'lightblue',
         width: 130,
+        margin: '0px 0px 0px 15px',
 
     },
     contentWrap: {
@@ -58,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
     stickyNav: {
         height: 300,
-        backgroundColor: 'red',
+        backgroundColor: 'lightblue',
     },
 }));
 const LianZhengJianShe = () => {
