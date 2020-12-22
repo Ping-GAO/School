@@ -60,9 +60,6 @@ const useStyles = makeStyles((theme) => ({
         height: 300,
         backgroundColor: 'red',
     },
-    stickyActive: {
-        fontSize: '2em',
-    },
 }));
 const LianZhengJianShe = () => {
     const classes = useStyles();
@@ -94,10 +91,17 @@ const LianZhengJianShe = () => {
             </div>
             <div className={classes.mainWrap}>
                 <div className={classes.contentWrap}>mainContent</div>
-
                 <div className={classes.navWrap}>
+                    {
+                        // 64 here is the length of the appBar
+                        // for smooth ui, need to set both stickyStyle and topOffset
+                        // stickyStyle set the distance from window when sticky is triggered
+                        // topOffset is used to set when to tigger the sticky, its negative
+                        // due to the appbar is fixed taken out of the normal flow
+                    }
                     <Sticky
-                        stickyClassName={classes.stickyActive}
+                        stickyStyle={{ top: '64px' }}
+                        topOffset={-64}
                     >
                         <div className={classes.stickyNav}>
                             sticky navbar
