@@ -2,9 +2,13 @@ body {
     margin: 0;
 }
 
+/* 
+this technique is from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ 
+and is use to offset the viewport when reidrect by side navlinks
+*/
 section:before {
     content: '';
     display: block;
-    height: 50px;
-    margin: -30px 0 0;
+    height: 64px;
+    margin: -64px 0 0;
 }

@@ -252,7 +252,7 @@ const LianZhengJianShe = () => {
                                 className="scrollspy"
                                 items={['section-1', 'section-2', 'section-3']}
                                 currentClassName={classes.isCurrent}
-                                offset={-200}
+                                offset={-64}
                             >
                                 <li><a href="#section-1">section 1</a></li>
                                 <li><a href="#section-2">section 2</a></li>
