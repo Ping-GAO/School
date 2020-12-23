@@ -5,10 +5,12 @@ body {
 /* 
 this technique is from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ 
 and is use to offset the viewport when reidrect by side navlinks
+i think the author use negative margin to consume upper fixed postion element's padding
+in my case there is none, so i comment out that line of css 
 */
 section:before {
     content: '';
     display: block;
     height: 64px;
-    margin: -64px 0 0;
+    /* margin: -64px 0 0; */
 }
